@@ -68,7 +68,7 @@ $$v_0 = v_0 - (((v_1 \ll 4) + k_0) \oplus (v_1 + \text{sum}) \oplus ((v_1 \gg 5)
 
 ## Code Algorithm in C:
 
-```bash
+```c
 #include <stdint.h>
 
 void encrypt (uint32_t v[2], const uint32_t k[4]) {
