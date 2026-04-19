@@ -2,7 +2,7 @@
 `ifndef TEA_8ROUNDS
 `define TEA_8ROUNDS
 
-`include "tea_round.v"
+`include "RTL/common/tea_round.v"
 
 module tea_8rounds(
     input [63:0] v_in,

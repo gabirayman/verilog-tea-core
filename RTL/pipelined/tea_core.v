@@ -1,5 +1,5 @@
-`include "tea_8rounds.v"
-`include "tea_round.v"
+`include "RTL/pipelined/tea_8rounds.v"
+`include "RTL/common/tea_round.v"
 
 module tea_core (
     input wire clk,

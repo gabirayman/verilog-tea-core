@@ -1,0 +1,4 @@
+build/
+*.dot
+*.vvp
+*.vcd

@@ -1,4 +1,4 @@
-`include "test_params.vh"
+`include "DV/common/test_params.vh"
 `timescale 1ns / 1ps
 
 module tea_core_tb();
@@ -42,11 +42,11 @@ module tea_core_tb();
 
     // --- PROCESS 1: The Feeder (0-1-0-1 Pattern) ---
     initial begin : feeder_block
-        $dumpfile("tea_waves.vcd"); 
+        $dumpfile("build/pipelined/tea_waves.vcd"); 
         $dumpvars(0, tea_core_tb);
 
         // Load test vectors from hex file
-        $readmemh("tea_tests.mem", test_vectors);
+        $readmemh("DV/common/tea_tests.mem", test_vectors);
         
         // Initialize inputs
         clk = 0; 
