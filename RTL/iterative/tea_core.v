@@ -26,14 +26,7 @@ reg [31:0] sum;
 reg [5:0] count;
 reg mode_reg; // To hold the mode (encrypt/decrypt) during operation
 
-// Internal wires
-// wire [31:0] next_sum = (mode_reg == 1'b0) ? (sum + DELTA) : (sum - DELTA);
-// wire [31:0] sum_add_delta = sum + DELTA;
-// wire [31:0] sum_sub_delta = sum - DELTA;
-
-// wire[31:0] sum_to_round = (mode_reg == 1'b0) ? sum : (sum); // Pass the correct sum to the round modules
 wire [63:0] v_next;
-// wire [63:0] v_next = (mode_reg == 1'b0) ? v_next_enc : v_next_dec;
 
 // Instantiate the tea_round module
 tea_round enc_engine (

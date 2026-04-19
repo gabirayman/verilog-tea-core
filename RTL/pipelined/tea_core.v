@@ -19,19 +19,19 @@ localparam DELTA_TIMES_32 = 32'hC6EF3720; // DELTA * 32
 
 //Internal Registers and wires
 
-// 1. INPUT REGISTERS (Stage 0)
-// This captures the "outside world" data when start is high
+// INPUT REGISTERS (Stage 0)
+// This captures the data when start is high
 reg [63:0]  v_reg0;
 reg [31:0]  sum_reg0;
 reg [127:0] key_reg0;
 reg         mode_reg0;
 reg         valid_reg0;
 
-// 2. INTERMEDIATE WIRES (The logic outputs)
+// INTERMEDIATE WIRES (The logic outputs)
 wire [63:0] v_out0, v_out1, v_out2, v_out3;
 wire [31:0] sum_out0, sum_out1, sum_out2, sum_out3;
 
-// 3. PIPELINE REGISTERS (Stages 1, 2, 3)
+// PIPELINE REGISTERS (Stages 1, 2, 3)
 // These capture the 'v_out' wires on every clock edge.
 reg [63:0]  v_reg1, v_reg2, v_reg3;
 reg [31:0]  sum_reg1, sum_reg2, sum_reg3;
