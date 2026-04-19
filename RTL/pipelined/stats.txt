@@ -1,0 +1,80 @@
+=== tea_core ===
+
+        +----------Local Count, excluding submodules.
+        |
+       40 wires
+     1584 wire bits
+       37 public wires
+     1550 public wire bits
+        9 ports
+      262 port bits
+       25 cells
+        6   $adff
+       16   $dffe
+        2   $mux
+        1   $reduce_and
+        4 submodules
+        4   tea_8rounds
+
+=== tea_8rounds ===
+
+        +----------Local Count, excluding submodules.
+        |
+       39 wires
+     1665 wire bits
+       23 public wires
+     1153 public wire bits
+        6 ports
+      321 port bits
+       24 cells
+        8   $add
+        8   $mux
+        8   $sub
+        8 submodules
+        8   tea_round
+
+=== tea_round ===
+
+        +----------Local Count, excluding submodules.
+        |
+       35 wires
+     1249 wire bits
+       15 public wires
+      609 public wire bits
+        5 ports
+      289 port bits
+       25 cells
+       14   $add
+        1   $mux
+        2   $sub
+        8   $xor
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        |
+      921 tea_core
+       24 tea_8rounds
+       25   tea_round
+
+        +----------Count including submodules.
+        |
+     1316 wires
+    48212 wire bits
+      609 public wires
+    25650 public wire bits
+      193 ports
+    10794 port bits
+        - memories
+        - memory bits
+        - processes
+      921 cells
+      480   $add
+        6   $adff
+       16   $dffe
+       66   $mux
+        1   $reduce_and
+       96   $sub
+      256   $xor
+        4 submodules
+        4   tea_8rounds

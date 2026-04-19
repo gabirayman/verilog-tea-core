@@ -1,0 +1,1 @@
+python DV\gen_vectors.py 100
